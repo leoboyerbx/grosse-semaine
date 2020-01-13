@@ -1,0 +1,32 @@
+#circuit {
+  position: absolute;
+  height: 100%;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  right: 5%;
+  &.sticky {
+    position: fixed;
+    top: 0;
+  }
+
+  svg {
+    width: 100%;
+    overflow: visible;
+
+    #transistor_1_, #diode_1_ {
+      transition: .4s $transition-easing;
+      transform: translateY(-150%);
+    }
+    #diode_1_ {
+      transition-delay: .05s;
+    }
+  }
+  &.machine1 {
+    #transistor_1_, #diode_1_ {
+      transform: translateY(0);
+    }
+  }
+}

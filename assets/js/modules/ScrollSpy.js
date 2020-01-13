@@ -1,9 +1,9 @@
 export default class ScrollSpy {
-    constructor (items, root = null) {
+    constructor (items, offset = 0.5, root = null) {
        items = Array.from(items)
         const options = {
             root,
-            threshold: 0.5
+            threshold: offset
         }
         this.observer = new  IntersectionObserver((entries, observer) => {
             this.observerCallback(entries, observer)

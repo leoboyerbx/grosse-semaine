@@ -1,0 +1,37 @@
+// FOnts
+@import '~fonts/MontserratRaleway.css';
+
+//bootstrap grid only
+@import './lib/bootstrap/bootstrap-grid.scss';
+
+// responsive design
+@import "./globals/breakpoints";
+@import "./globals/globals";
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+#header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url('~img/bg-header.webp') center center fixed;
+  background-size: cover;
+}
+#page-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  .slide {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

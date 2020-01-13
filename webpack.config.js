@@ -19,13 +19,14 @@ let config = {
     resolve: {
         alias: {
             '@': path.resolve('./assets/js/'),
+            'fonts': path.resolve('./assets/fonts/'),
             '@css': path.resolve('./assets/css/'),
             '@scss': path.resolve('./assets/scss/'),
-            '@img': path.resolve('./assets/img/')
+            'img': path.resolve('./assets/img/')
         }
     },
     watch: dev,
-    mode: 'development',
+    mode: dev ? 'development' : 'production',
     plugins: [
         new MiniCssExtractPlugin({
             filename: "style.bundle.css"
@@ -34,7 +35,7 @@ let config = {
     devtool: dev ? "cheap-module-eval-source-map" : "source-map",
     module: {
         rules: [
-            
+
             {
                 test: /\.css$/,
                 use: styleLoaders
@@ -58,7 +59,7 @@ let config = {
                 }
             },
             {
-                test: /\.(png|gif|jpg|svg)$/i,
+                test: /\.(png|gif|jpg|svg|webp)$/i,
                 use: [
                     {
                         loader: 'url-loader',

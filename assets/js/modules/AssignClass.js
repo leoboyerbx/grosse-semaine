@@ -1,6 +1,6 @@
 export default class AssignClass {
     constructor (element, prefix) {
-       this.element = element
+        this.element = element
         this.prefix = prefix
     }
 

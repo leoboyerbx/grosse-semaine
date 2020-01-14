@@ -1,4 +1,3 @@
-import { $$, getDistanceFromTop, multipleDistancesFromTop } from './utilis'
 import css from './css'
 
 const menu = {
@@ -22,9 +21,6 @@ const api = {
   getScrolledState: function () {
     return menu.scrolledState
   },
-  updateDistances: function () {
-    updateItemsDistanceFromTop()
-  },
   updateResponsive: function () {
     updateResponsive()
   },
@@ -42,35 +38,21 @@ const api = {
   }
 }
 
-function scrollTo (item) {
-  window.scroll({
-    top: (item.distanceFromTop - menu.hidingHeight()),
-    left: 0,
-    behavior: 'smooth'
-  })
-  if (menu.responsive) {
-    closeMenu()
-  }
-}
-
 async function createElements (sources) {
   menu.button = document.createElement('div')
   menu.button.id = 'menubutton'
   menu.button.innerHTML = `<div class="menubar"></div><div class="menubar"></div><div class="menubar"></div>`
   menu.button.addEventListener('click', toggleMenu)
 
-  menu.itemsWrapper = document.createElement('ul')
-  menu.element.appendChild(menu.itemsWrapper)
+  menu.itemsWrapper = menu.element.querySelector('ul')
   // menu.elementsWidth = window.getComputedStyle(menu.itemsWrapper).getPropertyValue('padding-left')
   menu.elementsWidth += parseFloat(css(menu.itemsWrapper, 'padding-left').replace(/px/gi, ''))
 
   sources.forEach(source => {
     const item = {
-      source: source,
-      element: document.createElement('li'),
-      distanceFromTop: getDistanceFromTop(source)
+      source,
+      element: source
     }
-    item.element.innerText = source.dataset.menu
     menu.items.push(item)
 
     menu.itemsWrapper.appendChild(item.element)
@@ -131,16 +113,6 @@ function moveWrapper (item) {
   css(menu.itemsWrapper, 'transform', 'translate3d(0, -' + parsed.index * rect.height + 'px, 0)')
 }
 
-function updatePage (item) {
-  if (menu.responsive) {
-    if (!menu.open) {
-      moveWrapper(item)
-    }
-  } else {
-    underlineItem(item)
-  }
-}
-
 function openMenu () {
   menu.button.classList.add('open')
   setScrolledState(true)
@@ -155,6 +127,7 @@ function closeMenu () {
   moveWrapper(menu.currentPageIndex)
   css(menu.element, 'height', css(menu.items[0].element,'height'))
   menu.open = false
+  if (!window.scrollY) setScrolledState(false)
 }
 
 function toggleMenu () {
@@ -165,40 +138,27 @@ function toggleMenu () {
   }
 }
 
-function matchScroll (offset = 0) {
-  const scroll = window.scrollY
-  for (let i = menu.items.length - 1; i >= 0; i--) {
-    const item = menu.items[i]
-    if (scroll >= (item.distanceFromTop - item.source.offsetHeight) - offset) {
-      return item
-    }
-  }
-  return menu.items[0]
-}
-
-function updateItemsDistanceFromTop () {
-  menu.itemsDistanceFromTop = multipleDistancesFromTop(menu.items)
-}
-
 function updateResponsive () {
   const pageWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
   if (pageWidth <= menu.elementsWidth) {
     menu.element.classList.add('responsive')
+    moveWrapper(menu.currentPageIndex)
     menu.responsive = true
   } else {
     menu.element.classList.remove('responsive')
     menu.responsive = false
-    moveUnderline(menu.currentPageIndex)
+    underlineItem(menu.currentPageIndex)
     moveWrapper(0)
   }
 }
 
-export default function (element, selector, currentPage = 0) {
+export default function createMenu (element, selector, currentPage = 0) {
   menu.element = element
   menu.currentPageIndex = currentPage
-  createElements($$(selector)).then(() => {
+  createElements(element.querySelectorAll(selector)).then(() => {
     const initRect = menu.items[menu.currentPageIndex].element.getBoundingClientRect()
-    moveUnderline(initRect.left, initRect.width)
+    // moveUnderline(initRect.left, initRect.width)
+    window.setTimeout(() => underlineItem(currentPage), 10)
     window.addEventListener('resize', updateResponsive)
     updateResponsive()
   })

@@ -46,17 +46,17 @@ function createLightBox () {
         })
         lightboxWrapper.appendChild(image)
 
-        const close = document.createElement('div')
-        css(image, {
+        const closeButton = document.createElement('div')
+        closeButton.innerHTML = "&times;";
+        css(closeButton, {
             position: 'fixed',
-            top: '10px',
-            right: '10px',
-            width: '',
-            'object-fit': 'contain',
-            transition: 'all .3s',
-            transform: 'scale(.4)'
+            top: '0',
+            right: '20px',
+            'color': '#fff',
+            'cursor': 'pointer',
+            'font-size': '80px'
         })
-        lightboxWrapper.appendChild(image)
+        lightboxWrapper.appendChild(closeButton)
     }
 }
 

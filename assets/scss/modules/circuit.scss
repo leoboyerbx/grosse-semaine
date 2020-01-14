@@ -24,6 +24,11 @@
       transition-delay: .05s;
     }
   }
+  &.scroll-intro {
+    #transistor_1_, #diode_1_ {
+      transform: translateY(0);
+    }
+  }
   &.scroll-machine1 {
     #transistor_1_, #diode_1_ {
       transform: translateY(0);

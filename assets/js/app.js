@@ -14,7 +14,7 @@ $(document).ready(function() {
         }
     })
 
-    const spy = new ScrollSpy($('.slide'))
+    const spy = new ScrollSpy($('.slide'), 0.7)
     const circuitClass = new AssignClass($circuit, 'scroll-')
     spy.on('scrollChange', (element) =>  {
         if (element.dataset.anim) {

@@ -6,14 +6,18 @@
 
 // responsive design
 @import "./globals/breakpoints";
+// global variables
 @import "./globals/globals";
+
+// components
 @import "./modules/circuit";
+@import "./modules/machine";
 
 body {
   font-family: 'Raleway', sans-serif;
 }
 
-#header {
+#plateforme__header {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -22,14 +26,14 @@ body {
   background: url('~img/bg-header.webp') center center fixed;
   background-size: cover;
 }
-#page-content {
+#plateforme__page-content {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
 
   .slide {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

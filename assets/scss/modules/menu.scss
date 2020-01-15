@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  transition: all 0.5s cubic-bezier(.42, 0, .11, .98);
+  transition: all 0.5s cubic-bezier(.42, 0, .11, .98), opacity .2s;
   display: flex;
   align-items: center;
   #menu__logo {

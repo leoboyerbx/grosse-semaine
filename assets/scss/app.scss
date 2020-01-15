@@ -161,6 +161,7 @@ body {
   padding: 5px 20px 20px 20px;
   border: solid #444 1px;
   border-radius: 5px;
+  margin: 10px 0;
 
   display: grid;
   grid-template-areas: "col-left col-left col-left col-right"
@@ -177,24 +178,37 @@ body {
   }
   .col-left {grid-area: col-left}
   .col-right {
-    grid-area: col-right
+    grid-area: col-right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .readmore-link {
+    color: #2980b9;
+    margin-bottom: 20px;
+    display: inline-block;
+    &.highlighted {
+      color: #fff!important;
+    }
   }
 }
 .download-icon {
   position: relative;
-  width: 100%;
-  &::before {
-    content: url('~img/download.svg');
-    position: absolute;
-    width: 100%;
-  }
+  width: 60px;
+  height: 60px;
+  display: block;
+  background: url('~img/download.svg') no-repeat;
+  background-size: cover;
+
 }
 .pro__equipment-item__tags {
   display: flex;
   grid-area: tags;
 
   .tag {
-    margin-right: 10px;
+    margin: 0 5px;
     font-weight: bold;
     background-color: #fff;
     border-radius: 4px;
@@ -216,12 +230,12 @@ body {
     border-color: $color-gccd-second;
   }
   .tag.geii {
-    color: $color-geii-second;
-    border-color: $color-geii-second;
+    color: $color-geii-first;
+    border-color: $color-geii-first;
   }
   .tag.gte {
-    color: $color-gte-second;
-    border-color: $color-gte-second;
+    color: $color-gte-first;
+    border-color: $color-gte-first;
   }
   .tag.gmp {
     color: $color-gmp-second;
@@ -231,4 +245,9 @@ body {
     color: $color-chimie-second;
     border-color: $color-chimie-second;
   }
+}
+
+.highlighted {
+  background-color: #6666ff;
+  color: #fff;
 }

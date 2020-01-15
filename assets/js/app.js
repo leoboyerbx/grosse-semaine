@@ -3,7 +3,7 @@ import ScrollSpy from "@/modules/ScrollSpy";
 import AssignClass from "@/modules/AssignClass";
 import setUpLightBoxes from "@/modules/lightbox";
 import createMenu from "@/modules/menu";
-// window.$ = $
+import equipmentSearch from "@/components/equipmentSearch";
 
 $(document).ready(function() {
     if (document.body.dataset.page === '1') {
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     const $equipments_list = $('#pro__equipments-list')
     if ($equipments_list.length) {
-        console.log('pro')
+        equipmentSearch()
     }
 
 })

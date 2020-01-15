@@ -10,6 +10,26 @@
     margin: 0 20px;
     color: #fff;
   }
+
+  #menu__logo {
+    margin-left: 20px;
+    position: relative;
+    width: 70px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      transition: all .4s;
+      &:last-child {
+        opacity: 0;
+      }
+    }
+  }
+
   ul {
     display: flex;
     align-items: center;
@@ -47,6 +67,15 @@
     transition: all .5s;
   }
   &.scrolled {
+    #menu__logo img {
+      &:first-child {
+        opacity: 0;
+      }
+      &:last-child {
+        opacity: 1;
+      }
+    }
+
     .menu-picto {
       filter: saturate(1) brightness(1);
     }
@@ -147,6 +176,10 @@
     }
   }
   &.responsive {
+
+    #menu__logo {
+      display: none;
+    }
     overflow: hidden;
     height: 60px;
     display: block;

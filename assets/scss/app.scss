@@ -93,16 +93,21 @@ body {
 
 .header__logo {
   min-width: 100px;
-  width: 200px;
-  height: 200px;
-  background-color: #262427;
+  max-width: 90%;
+  margin-bottom: 40px;
 }
+.header__logo__img {
+  filter: brightness(2);
+  width: 300px;
+  max-width: 100%;
+}
+
 .header__description {
   min-width: 200px;
   max-width: 600px;
   margin-left: 20px;
   font-size: 120%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.4);
   padding: 20px;
 }
 .header__description__buttons {

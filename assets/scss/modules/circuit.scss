@@ -37,12 +37,20 @@
     #boite-haut_1_,
     #laser_1_,
     #bacbas_1_,
-    #bachaut_2_ {
+    #bachaut_2_,
+    #loupe_x5F_rond_2_,
+    #loupe_x5F_wrapper_1_{
       opacity: 0;
     }
     // machine1: brasure
     #transistor_1_, #diode_1_ {
       transition: .3s $transition-easing;
+    }
+
+    //machine2: loupe
+    #loupe_x5F_rond_2_,
+    #loupe_x5F_wrapper_1_{
+      transition: all .4s $transition-easing;
     }
 
     // machine 3: ray x
@@ -86,6 +94,11 @@
     }
     #coupe_2_ {
       transition: all .4s $transition-easing;
+    }
+    //machine5: bac
+    #bacbas_1_, #bachaut_2_ {
+      transition: all .4s $transition-easing;
+      transform: translateY(100px);
     }
 
     // machine6: chocs thermiques
@@ -132,7 +145,10 @@
     }
   }
   &.scroll-machine2 {
-
+    #loupe_x5F_wrapper_1_, #loupe_x5F_rond_2_ {
+      opacity: 1;
+      transition-delay: .4s;
+    }
   }
   &.scroll-machine3 {
     #boite-haut_1_, #boite-bas_1_ {
@@ -157,8 +173,10 @@
     }
   }
   &.scroll-machine5 {
-    #bachaut_2_ {
+    #bacbas_1_, #bachaut_2_{
       opacity: 1;
+      transition: opacity .2s .4s, transform .4s $transition-easing .4s;
+      transform: translateY(0);
     }
   }
   &.scroll-machine6 {

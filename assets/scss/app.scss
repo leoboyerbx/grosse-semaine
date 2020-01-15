@@ -27,10 +27,39 @@ body {
 
 #home__header {
   width: 100%;
-  height: 300px;
   margin: 0;
-  padding: 0;
-  background-color: #000;
+  padding: 90px 0 25px;
+  background: darken($color-theme-second, 8);
+  background: url('~img/bg-header-accueil.jpg') center center;
+  background-size: cover;
+  color: #fff;
+}
+.home__header__content {
+  text-align: center;
+  width: 100%;
+  padding: 30px 10%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#home__content {
+  padding: 20px 8%;
+  text-align: center;
+  h1 {
+    font-size: 180%;
+  }
+}
+.list-plateformes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.component-plateforme {
+  background-color: #ff66bb;
+  height: 250px;
+  width: 250px;
+  max-width: 100%;
+  margin: 10px;
 }
 
 .plateforme__header {
@@ -41,7 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 60px 10% 10%;
+  padding: 80px 10% 10%;
   flex-wrap: wrap;
   color: #fff;
   background-color: #000;
@@ -63,6 +92,8 @@ body {
   max-width: 600px;
   margin-left: 20px;
   font-size: 120%;
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px;
 }
 .header__description__buttons {
   width: 100%;

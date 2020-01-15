@@ -152,9 +152,11 @@ function updateResponsive () {
   }
 }
 
-export default function createMenu (element, selector, currentPage = 0) {
+export default function createMenu (element, selector, currentPage = 0, deltaOffsetWidth = 0) {
+  console.log(deltaOffsetWidth)
   menu.element = element
   menu.currentPageIndex = currentPage
+  menu.elementsWidth += deltaOffsetWidth
   createElements(element.querySelectorAll(selector)).then(() => {
     const initRect = menu.items[menu.currentPageIndex].element.getBoundingClientRect()
     // moveUnderline(initRect.left, initRect.width)

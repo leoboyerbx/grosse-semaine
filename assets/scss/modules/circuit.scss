@@ -42,6 +42,14 @@
     #loupe_x5F_wrapper_1_{
       opacity: 0;
     }
+
+    //machine0: gravure
+    #pcb-content_2_ .st14, #pcb-content_3_ .st14 {
+      fill: #09CBC0 !important;
+      opacity: 1;
+      transition: opacity .3s, fill .5s .5s;
+    }
+
     // machine1: brasure
     #transistor_1_, #diode_1_, #process_1_ {
       transition: .4s $transition-easing;
@@ -132,6 +140,19 @@
 
   }
   &.scroll-intro {
+    #transistor_1_, #diode_1_, #process_1_ {
+      transform: translateY(-130px);
+    }
+    #pcb-content_2_ {
+      height: 12px;
+    }
+    #pcb-content_2_ .st14, #pcb-content_3_ .st14 {
+      fill: #f00 !important;
+      opacity: 0;
+      transition: .2s;
+    }
+  }
+  &.scroll-machine0 {
     #transistor_1_, #diode_1_, #process_1_ {
       transform: translateY(-130px);
     }

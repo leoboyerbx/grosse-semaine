@@ -1,5 +1,8 @@
-.machine {
-
+.slide {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .machine__description {
   width: 50%;
@@ -17,4 +20,5 @@
 #intro {
   background-color: #fff;
   color: #000;
+  min-height: 100vh;
 }

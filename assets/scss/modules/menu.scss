@@ -17,8 +17,8 @@
     width: 100%;
     color: #fff;
     transition: all 0.5s cubic-bezier(.42, 0, .11, .98);
-    margin-top: 17px;
-    margin-bottom: 17px;
+    margin-top: 7px;
+    margin-bottom: 7px;
     padding-inline-start: 0;
   }
   ul li {
@@ -41,16 +41,54 @@
   }
   .menu-picto {
     stroke: #fff;
-    margin-right: 10px;
+    margin-right: 8px;
+    margin-left: 5px;
+    filter: saturate(0) brightness(10);
+    transition: all .5s;
   }
   &.scrolled {
+    .menu-picto {
+      filter: saturate(1) brightness(1);
+    }
     background-color: #fff;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 
     ul {
+      margin-top: 0;
+      margin-bottom:0;
+    }
+    a {
       color: #000;
-      margin-top: 10px;
-      margin-bottom: 10px;
+    }
+    a.geii {
+      transition: all .2s;
+      &.active, &:hover {
+        color: $color-geii-second;
+      }
+    }
+    a.chimie {
+      transition: all .2s;
+      &.active, &:hover {
+        color: $color-chimie-second;
+      }
+    }
+   a.gccd {
+      transition: all .2s;
+      &.active, &:hover {
+        color: $color-gccd-second;
+      }
+    }
+    a.gmp {
+      transition: all .2s;
+      &.active, &:hover {
+        color: $color-gmp-second;
+      }
+    }
+    a.gte {
+      transition: all .2s;
+      &.active, &:hover {
+        color: $color-gte-second;
+      }
     }
     #menu__cta {
       margin-top: 10px;
@@ -129,6 +167,9 @@
           height: 60px;
           line-height: 60px;
         }
+      .not-menuitem {
+        line-height: unset;
+      }
      }
     #menubutton {
       display: block;
@@ -138,3 +179,4 @@
     }
   }
 }
+

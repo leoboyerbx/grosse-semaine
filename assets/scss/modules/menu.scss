@@ -33,7 +33,7 @@
   #menu__cta {
     display: inline-block;
     text-align: left;
-    margin: 20px 20px 20px auto;
+    margin: 15px 20px 15px auto;
     transition: all 0.5s cubic-bezier(.42, 0, .11, .98);
   }
   &.scrolled {
@@ -46,8 +46,8 @@
       margin-bottom: 10px;
     }
     #menu__cta {
-      margin-top: 15px;
-      margin-bottom: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
     .underline {
        background-color: #000;

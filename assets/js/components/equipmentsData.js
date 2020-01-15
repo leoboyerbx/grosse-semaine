@@ -42,3 +42,4 @@ Enfin, vous aurez la possibilité de créer constamment des images nettes à par
 ]
 
 export default data
+

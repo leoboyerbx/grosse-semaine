@@ -19,6 +19,16 @@
   box-sizing: border-box;
 }
 
+.input-theme {
+  font-size: 120%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   margin: 0;
@@ -121,4 +131,103 @@ body {
     justify-content: center;
   }
 
+}
+
+.pro__header {
+  min-height: 400px;
+  padding-top: 100px;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+.pro__header__title {
+  font-size: 120%;
+  margin: 0 10%;
+  h1 {
+    font-size: 200%;
+  }
+}
+#pro__page-content {
+  padding: 20px 8%;
+}
+#search-field {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pro__equipment-item {
+  width: 100%;
+  padding: 5px 20px 20px 20px;
+  border: solid #444 1px;
+  border-radius: 5px;
+
+  display: grid;
+  grid-template-areas: "col-left col-left col-left col-right"
+                        "tags tags tags tags";
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 170%;
+  }
+
+  p {
+    font-size: 110%;
+  }
+  .col-left {grid-area: col-left}
+  .col-right {
+    grid-area: col-right
+  }
+}
+.download-icon {
+  position: relative;
+  &::before {
+    content: url('~img/download.svg');
+    position: absolute;
+    width: 100%;
+  }
+}
+.pro__equipment-item__tags {
+  display: flex;
+  grid-area: tags;
+
+  .tag {
+    margin-right: 10px;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    padding: 5px 10px;
+    border: solid black 2px;
+    color: #000;
+  }
+  .tag.theme {
+    color: $color-theme-second;
+    border-color: $color-theme-second;
+  }
+  .tag.theme2 {
+    color: $color-theme-first;
+    border-color: $color-theme-first;
+  }
+  .tag.gccd {
+    color: $color-gccd-second;
+    border-color: $color-gccd-second;
+  }
+  .tag.geii {
+    color: $color-geii-second;
+    border-color: $color-geii-second;
+  }
+  .tag.gte {
+    color: $color-gte-second;
+    border-color: $color-gte-second;
+  }
+  .tag.gmp {
+    color: $color-gmp-second;
+    border-color: $color-gmp-second;
+  }
+  .tag.chimie {
+    color: $color-chimie-second;
+    border-color: $color-chimie-second;
+  }
 }

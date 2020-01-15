@@ -153,7 +153,6 @@ function updateResponsive () {
 }
 
 export default function createMenu (element, selector, currentPage = 0, deltaOffsetWidth = 0) {
-  console.log(deltaOffsetWidth)
   menu.element = element
   menu.currentPageIndex = currentPage
   menu.elementsWidth += deltaOffsetWidth

@@ -44,5 +44,10 @@ $(document).ready(function() {
     window.addEventListener('scroll', autoMenu)
     autoMenu()
 
+    const $equipments_list = $('#pro__equipments-list')
+    if ($equipments_list.length) {
+        console.log('pro')
+    }
+
 })
 //test

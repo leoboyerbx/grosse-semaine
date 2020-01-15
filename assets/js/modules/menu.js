@@ -55,7 +55,7 @@ async function createElements (sources) {
     }
     menu.items.push(item)
 
-    menu.itemsWrapper.appendChild(item.element)
+    // menu.itemsWrapper.appendChild(item.element)
     menu.elementsWidth += item.element.getBoundingClientRect().width
 
     item.element.addEventListener('mouseover', () => {

@@ -33,7 +33,7 @@ $(document).ready(function() {
     }
 
     // gestion du menu
-    const menu = createMenu($('#main-nav').get(0), 'li', parseInt(document.body.dataset.page || 0))
+    const menu = createMenu($('#main-nav').get(0), 'li:not(.not-menuitem)', parseInt(document.body.dataset.page || 0))
     function autoMenu () {
         if (window.scrollY && !menu.getScrolledState()) {
             menu.setScrolledState(true)

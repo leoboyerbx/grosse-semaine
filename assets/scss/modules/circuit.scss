@@ -43,8 +43,8 @@
       opacity: 0;
     }
     // machine1: brasure
-    #transistor_1_, #diode_1_ {
-      transition: .3s $transition-easing;
+    #transistor_1_, #diode_1_, #process_1_ {
+      transition: .4s $transition-easing;
     }
 
     //machine2: loupe
@@ -132,16 +132,19 @@
 
   }
   &.scroll-intro {
-    #transistor_1_, #diode_1_ {
+    #transistor_1_, #diode_1_, #process_1_ {
       transform: translateY(-130px);
     }
   }
   &.scroll-machine1 {
-    #transistor_1_, #diode_1_ {
+    #transistor_1_, #diode_1_, #process_1_ {
       transform: translateY(0);
     }
     #diode_1_ {
       transition-delay: .05s;
+    }
+    #process_1_ {
+      transition-delay: .1s;
     }
   }
   &.scroll-machine2 {
@@ -167,9 +170,13 @@
       transform: translateX(-50px);
       transition: all .4s $transition-easing .5s;
     }
-    #coupe_2_ {
+    #coupe_2_{
       transform: translateX(100px);
-      transition-delay: .5s;
+      transition: all .4s $transition-easing .5s;
+    }
+    #process_1_ {
+      transform: translateX(50px);
+      transition: all .4s $transition-easing .5s;
     }
   }
   &.scroll-machine5 {

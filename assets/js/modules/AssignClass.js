@@ -12,5 +12,4 @@ export default class AssignClass {
         })
         this.element.addClass(this.prefix + className)
     }
-
 }

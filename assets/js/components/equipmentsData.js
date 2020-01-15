@@ -13,6 +13,7 @@ Enfin, vous aurez la possibilité de créer constamment des images nettes à par
             { class: "", name: "Électronique" },
             { class: "", name: "Contrôle qualité" }
         ],
+        platform: 'geii',
         urlPDF: '#',
         url: ''
     },
@@ -24,6 +25,7 @@ Enfin, vous aurez la possibilité de créer constamment des images nettes à par
             { class: "gccd", name: "Plateforme Hall Structure" },
             { class: "", name: "Lorem" }
         ],
+        platform: 'gccd',
         url: '#'
     },
     {
@@ -34,6 +36,7 @@ Enfin, vous aurez la possibilité de créer constamment des images nettes à par
             { class: "geii", name: "Plateforme CEDMS" },
             { class: "", name: "Électronique" }
         ],
+        platform: 'geii',
         url: '#'
     }
 ]

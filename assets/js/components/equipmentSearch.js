@@ -9,12 +9,6 @@ export default function equipmentSearch () {
         const $input = $(this)
         let val = $input.val()
 
-        if (val === '') {
-            $('.pro__equipment-item').show()
-            $wrapper.find('.pro__equipment-item').each(function () {
-                unHighlightNext($(this))
-            })
-        }
 
         let regEx = `(.*)(${val})(.*)`
 
@@ -50,6 +44,14 @@ export default function equipmentSearch () {
                 $item.hide()
             }
         })
+
+
+        if (val === '') {
+            $('.pro__equipment-item').show()
+            $wrapper.find('.pro__equipment-item').each(function () {
+                unHighlightNext($(this))
+            })
+        }
     })
 }
 
@@ -110,6 +112,7 @@ function generateList ($wrapper) {
                 <div class="col col-right">
                     <a href="${equipmentItem.url}" class="download-icon"></a>
                     <p>Fiche technique</p>
+                    <p><a href="${equipmentItem.platform}.html" class="btn btn-${equipmentItem.platform}">Voir la plateforme</a></p>
                 </div>
                 <div class="pro__equipment-item__tags">
                     ${tags}

@@ -22,12 +22,14 @@
     padding-inline-start: 0;
   }
   ul li {
-    white-space: nowrap;
-     display: inline-block;
+      white-space: nowrap;
+    display: inline-block;
      padding: 8px 15px;
      cursor: pointer;
    }
   a, a:hover {
+    display: flex;
+    align-items: center;
     color: inherit;
     text-decoration: none;
   }
@@ -36,6 +38,10 @@
     text-align: left;
     margin: 15px 20px 15px auto;
     transition: all 0.5s cubic-bezier(.42, 0, .11, .98);
+  }
+  .menu-picto {
+    stroke: #fff;
+    margin-right: 10px;
   }
   &.scrolled {
     background-color: #fff;

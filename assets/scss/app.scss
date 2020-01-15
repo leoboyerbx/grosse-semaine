@@ -161,7 +161,7 @@ body {
   padding: 5px 20px 20px 20px;
   border: solid #444 1px;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 20px 0;
 
   display: grid;
   grid-template-areas: "col-left col-left col-left col-right"
@@ -184,6 +184,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
+    padding-top: 20px;
   }
   .readmore-link {
     color: #2980b9;
@@ -250,4 +251,15 @@ body {
 .highlighted {
   background-color: #6666ff;
   color: #fff;
+}
+
+.icon {
+  $deps: "chimie" "gccd" "geii" "gmp" "gte";
+  @each $dep in $deps {
+    &.i-#{$dep} {
+      &::before {
+        content: url("~img/pictos/#{$dep}.svg");
+      }
+    }
+  }
 }

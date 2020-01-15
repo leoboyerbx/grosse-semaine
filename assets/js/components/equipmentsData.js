@@ -1,6 +1,6 @@
 const data = [
     {
-        name: "Caméra Erascope2",
+        name: "Caméra Ersascope2",
         description: `Cette caméra permet de voir précisément, avec un angle à 90°, le brasage des billes de BGA pour vérifier s’il a été fait correctement.
 \tErsascope 2 a une grande flexibilité grâce à sept axes de mouvement pour l'inspection de BGA, µBGA, CSP, Flip Chip, CGA et le débit pour les connexions THT.
 Elle permet d'évaluer le remplissage du talon pour le petit boîtier QFP, les boîtiers SO (Small Outline) et d'autres composants avec des connexions d'ailes de mouette (broches sur un circuit intégré, ce sont les broches standard pour le QFP et le SO), mais aussi de déterminer la longueur de mouillage et le mouillage interne pour les boîtiers PLCC (Small Outline Integrated Circuit) et d'autres composants avec des connexions J. 

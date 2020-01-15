@@ -10,7 +10,7 @@ export default function equipmentSearch () {
         let val = $input.val()
 
 
-        let regEx = `(.*)(${val})(.*)`
+        let regEx = `(.*)(${escape(val)})(.*)`
 
         $('.pro__equipment-item').show()
 
@@ -73,11 +73,9 @@ function toggleHiddenParagraphs ($item) {
     }
 }
 function highlightNext ($item) {
-    console.log('highlight')
     $item.find('.readmore-link').addClass('highlighted')
 }
 function unHighlightNext ($item) {
-    console.log('hey')
     $item.find('.readmore-link').removeClass('highlighted')
 }
 

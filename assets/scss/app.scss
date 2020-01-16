@@ -65,11 +65,12 @@ body {
   justify-content: center;
 }
 .component-plateforme {
-  background-color: #ff66bb;
   height: 250px;
   width: 250px;
   max-width: 100%;
-  margin: 10px;
+  margin: 20px;
+  border-radius: 4px;
+  box-shadow:  0px 0px 20px rgba(0, 0, 0, .3);
 }
 
 .plateforme__header {
@@ -97,7 +98,6 @@ body {
   margin-bottom: 40px;
 }
 .header__logo__img {
-  filter: brightness(2);
   width: 300px;
   max-width: 100%;
 }

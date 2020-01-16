@@ -1,0 +1,299 @@
+// FOnts
+@import '~fonts/MontserratRaleway.css';
+
+//bootstrap grid only
+@import './lib/bootstrap/bootstrap-grid.scss';
+
+// responsive design
+@import "./globals/breakpoints";
+// global variables
+@import "./globals/globals";
+
+// components
+@import "./modules/buttons";
+@import "./modules/menu";
+@import "./modules/circuit";
+@import "./modules/machine";
+
+* {
+  box-sizing: border-box;
+}
+
+.input-theme {
+  font-size: 120%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#home__header {
+  width: 100%;
+  margin: 0;
+  padding: 90px 0 25px;
+  background: darken($color-theme-second, 8);
+  background: url('~img/bg-header-accueil.jpg') center center;
+  background-size: cover;
+  color: #fff;
+}
+.home__header__content {
+  text-align: center;
+  width: 100%;
+  padding: 30px 10%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#home__content {
+  padding: 20px 8%;
+  text-align: center;
+  h1 {
+    font-size: 180%;
+  }
+}
+.list-plateformes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.component-plateforme {
+  height: 250px;
+  width: 250px;
+  max-width: 100%;
+  margin: 20px;
+  border-radius: 4px;
+  box-shadow:  0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+.plateforme__header {
+  width: 100%;
+  min-height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 10% 10%;
+  flex-wrap: wrap;
+  color: #fff;
+  background-color: #000;
+}
+.plateforme__header--geii {
+  background: url('~img/bg-header-geii.jpg') center center fixed;
+  background-size: cover;
+
+}
+
+.header__logo {
+  min-width: 100px;
+  max-width: 90%;
+  margin-bottom: 40px;
+}
+.header__logo__img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.header__description {
+  min-width: 200px;
+  max-width: 600px;
+  margin-left: 20px;
+  font-size: 120%;
+  background-color: rgba(0,0,0,0.4);
+  padding: 20px;
+}
+.header__description__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .btn {
+    margin: 10px;
+  }
+}
+
+#plateforme__page-content {
+  width: 100%;
+
+  &.plateforme--geii {
+    background: url('~img/bg-page-geii.jpg') center center fixed;
+    background-size: cover;
+    color: #fff;
+  }
+}
+
+.pro__header {
+  min-height: 400px;
+  padding-top: 100px;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+.pro__header__title {
+  font-size: 120%;
+  margin: 0 10%;
+  h1 {
+    font-size: 200%;
+  }
+}
+#pro__page-content {
+  padding: 20px 8% 80px;
+}
+#search-field {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pro__equipment-item {
+  width: 100%;
+  padding: 5px 20px 20px 20px;
+  border: solid #444 1px;
+  border-radius: 5px;
+  margin: 20px 0;
+
+  display: grid;
+  grid-template-areas: "col-left col-left col-left col-right"
+                        "tags tags tags tags";
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 170%;
+  }
+
+  p {
+    font-size: 110%;
+  }
+  .col-left {grid-area: col-left}
+  .col-right {
+    grid-area: col-right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 20px;
+  }
+  .readmore-link {
+    color: #2980b9;
+    margin-bottom: 20px;
+    display: inline-block;
+    &.highlighted {
+      color: #fff!important;
+    }
+  }
+}
+.download-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  background: url('~img/download.svg') no-repeat;
+  background-size: cover;
+
+}
+.pro__equipment-item__tags {
+  display: flex;
+  grid-area: tags;
+
+  .tag {
+    margin: 0 5px;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    padding: 5px 10px;
+    border: solid black 2px;
+    color: #000;
+  }
+  .tag.theme {
+    color: $color-theme-second;
+    border-color: $color-theme-second;
+  }
+  .tag.theme2 {
+    color: $color-theme-first;
+    border-color: $color-theme-first;
+  }
+  .tag.gccd {
+    color: $color-gccd-second;
+    border-color: $color-gccd-second;
+  }
+  .tag.geii {
+    color: $color-geii-first;
+    border-color: $color-geii-first;
+  }
+  .tag.gte {
+    color: $color-gte-first;
+    border-color: $color-gte-first;
+  }
+  .tag.gmp {
+    color: $color-gmp-second;
+    border-color: $color-gmp-second;
+  }
+  .tag.chimie {
+    color: $color-chimie-second;
+    border-color: $color-chimie-second;
+  }
+}
+
+.highlighted {
+  background-color: #6666ff;
+  color: #fff;
+}
+
+.icon {
+  $deps: "chimie" "gccd" "geii" "gmp" "gte";
+  @each $dep in $deps {
+    &.i-#{$dep} {
+      &::before {
+        content: url("~img/pictos/#{$dep}.svg");
+      }
+    }
+  }
+}
+
+#main-footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #111;
+  z-index: -100;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  flex-wrap: wrap;
+  padding: 80px 0;
+}
+.footer__logo {
+  max-width: 150px;
+  margin-left: 20px;
+  img {
+    width: 100%;
+  }
+
+  flex-grow: 1;
+}
+.footer__text {
+  margin: 30px -20px;
+  max-width: 700px;
+  flex-grow: 4;
+  display: flex;
+  p {
+    margin: 0 20px;
+  }
+}
+.page--content {
+  background-color: #fff;
+  padding-bottom: 80px;
+}

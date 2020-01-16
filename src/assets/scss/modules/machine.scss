@@ -1,0 +1,24 @@
+.slide {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.machine__description {
+  width: 50%;
+  padding: 6%;
+}
+.machine__description__images {
+  padding: 10px 0;
+}
+.machine__description__image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+#intro {
+  background-color: #fff;
+  color: #000;
+  min-height: 100vh;
+}

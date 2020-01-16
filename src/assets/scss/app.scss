@@ -30,6 +30,9 @@ $deps: "chimie" "gccd" "geii" "gmp" "gte";
   color: #333;
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
+  &::placeholder {
+    font-weight: normal;
+  }
 }
 
 body {

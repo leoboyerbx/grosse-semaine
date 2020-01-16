@@ -1,6 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const dev = process.env.NODE_ENV === "dev"
+const glob = require('glob')
 
 let styleLoaders = [
     {
@@ -14,36 +16,42 @@ let styleLoaders = [
 
 let config = {
     entry: {
-        app: ['./assets/scss/app.scss', './assets/js/app.js']
+        app: ['./src/assets/scss/app.scss', './src/assets/js/app.js']
     },
     resolve: {
         alias: {
-            '@': path.resolve('./assets/js/'),
-            'fonts': path.resolve('./assets/fonts/'),
-            '@css': path.resolve('./assets/css/'),
-            '@scss': path.resolve('./assets/scss/'),
-            'img': path.resolve('./assets/img/')
+            '@': path.resolve('./src/assets/js/'),
+            'fonts': path.resolve('./src/assets/fonts/'),
+            '@css': path.resolve('./src/assets/css/'),
+            '@scss': path.resolve('./src/assets/scss/'),
+            'img': path.resolve('./src/assets/img/')
         }
     },
     watch: dev,
     mode: dev ? 'development' : 'production',
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: "style.bundle.css"
-        })
-    ],
     devtool: dev ? "cheap-module-eval-source-map" : "source-map",
     module: {
         rules: [
-
+            // {
+            //     test: /\.ejs$/,
+            //     use: [
+            //         {
+            //             loader: "ejs-loader",
+            //         },
+            //     ]
+            // },
+            {
+                test: /\.html$/,
+                use: ['html-loader']
+            },
             {
                 test: /\.css$/,
                 use: styleLoaders
             },
-        {
-        test: /\.scss$/,
-            use: [...styleLoaders, 'sass-loader']
-    },
+            {
+                test: /\.scss$/,
+                use: [...styleLoaders, 'sass-loader']
+            },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.* )?$/,
                 loader: 'file-loader',
@@ -78,11 +86,32 @@ let config = {
             },
         ]
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "style.bundle.css"
+        }),
+        // new HTMLWebpackPlugin({template: "src/index.ejs"}),
+        // // new HTMLWebpackPlugin({
+        // //     filename: 'geii.html',
+        // //     template: "src/geii.ejs"
+        // // }),
+        // // new HTMLWebpackPlugin({
+        // //     filename: 'pro.html',
+        // //     template: "src/pro.ejs"
+        // // })
+    ],
     output: {
-        path: path.resolve(__dirname, 'public/assets'),
+        path: path.resolve(__dirname, 'public'),
         filename: '[name].bundle.js'
     }
 
 };
+const files = glob.sync(path.resolve(__dirname, 'src/*.html'))
+files.forEach(file => {
+    config.plugins.push(new HTMLWebpackPlugin({
+        template: file,
+        filename: path.basename(file)
+    }))
+})
 
 module.exports = config

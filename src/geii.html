@@ -19,7 +19,7 @@
             </p>
             <div class="header__description__buttons">
                 <a href="#" class="btn btn-geii discover-button">Découvrir</a>
-                <a href="#" class="btn btn-geii">Voir la vidéo</a>
+                <a href="#" class="btn btn-geii js-show-video" data-target="#video">Voir la vidéo</a>
             </div>
         </div>
     </section>
@@ -46,12 +46,12 @@
         <div id="machine-0" class="slide machine" data-anim="machine0">
             <div class="machine__description">
                 <div class="machine__description__title">
-                    <h2>Graveuses LPKF </h2>
+                    <h2>Graveuses LPKF</h2>
                     <p>Les graveuses LPKF ProtoLaser ST et LPKF ProtoMat E44 sont les dernières acquisitions en date du CEDMS. Elles permettent la gravure de circuits imprimés sur des cartes vierges avec une précision exceptionnelle grâce à des programmes et composants derniers cris.</p>
                 </div>
                 <div class="machine__description__buttons">
-                    <a href="documents/fiche%20technique%20-%20Ersascope.pdf" class="btn btn-geii">Fiche technique</a>
-                    <a href="#" class="btn btn-geii js-show-video">Vidéo de présentation</a>
+                    <a href="documents/fiche%20technique%20-%20lpkf.pdf" class="btn btn-geii">Fiche technique</a>
+                    <a href="#" class="btn btn-geii js-show-video" data-target="#motion">Vidéo de présentation</a>
                 </div>
                 <div class="machine__description__images">
                     <p>Photos: </p>
@@ -74,7 +74,7 @@
                     Elle est utilisée au CEDMS pour réparer les cartes endommagées et assembler des composants neufs.</p>
                 </div>
                 <div class="machine__description__buttons">
-                    <a href="documents/fiche%20technique%20-%20Ersascope.pdf" class="btn btn-geii">Fiche technique</a>
+                    <a href="documents/fiche%20technique%20-%20brasage.pdf" class="btn btn-geii">Fiche technique</a>
                 </div>
                 <div class="machine__description__images">
                     <p>Photos: </p>
@@ -110,7 +110,7 @@
                     <p>    La taille du capteur est de 3cm x 4cm.</p>
                 </div>
                 <div class="machine__description__buttons">
-                    <a href="documents/fiche%20technique%20-%20Ersascope.pdf" class="btn btn-geii">Fiche technique</a>
+                    <a href="documents/fiche%20technique%20-%20lorem.pdf" class="btn btn-geii">Fiche technique</a>
                 </div>
                 <div class="machine__description__images">
                     <p>Photos: </p>
@@ -126,7 +126,7 @@
                     <p>Cette méthode est basée sur la découpe d’une carte électronique avec un ou des composants. On crée un moule afin d’assurer le maintien de la carte électronique et des composants. Des étapes de polissages sont ensuite effectuées. L’analyse au microscope optique permet ensuite de vérifier les joints de brasure et de mesurer l’épaisseur des intermétalliques.</p>
                 </div>
                 <div class="machine__description__buttons">
-                    <a href="documents/fiche%20technique%20-%20Ersascope.pdf" class="btn btn-geii">Fiche technique</a>
+                    <a href="documents/fiche%20technique%20-%20lorem.pdf" class="btn btn-geii">Fiche technique</a>
                 </div>
                 <div class="machine__description__images">
                     <p>Photos: </p>
@@ -143,7 +143,7 @@
                     <p>La durée de l’immersion de la carte sous test est systématiquement de 15 minutes à 25 °C afin de pouvoir apprécier l’activité ionique résiduelle en fin de test.</p>
                 </div>
                 <div class="machine__description__buttons">
-                    <a href="documents/fiche%20technique%20-%20Ersascope.pdf" class="btn btn-geii">Fiche technique</a>
+                    <a href="documents/fiche%20technique%20-%20lorem.pdf" class="btn btn-geii">Fiche technique</a>
                 </div>
             </div>
         </div>
@@ -159,7 +159,7 @@
                     <img src="assets/img/enceinte_ct.jpg" alt="" class="lightbox-img machine__description__image">
                 </div>
                 <div class="machine__description__buttons">
-                    <a href="documents/fiche%20technique%20-%20Ersascope.pdf" class="btn btn-geii">Fiche technique</a>
+                    <a href="documents/fiche%20technique%20-%20lorem.pdf" class="btn btn-geii">Fiche technique</a>
                 </div>
             </div>
         </div>
@@ -169,8 +169,20 @@
             <img src="assets/img/logos/logo-global-light.svg" alt="">
         </div>
         <div class="footer__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae culpa cupiditate earum enim eos est ex id impedit laboriosam, laudantium nam odio quasi repellendus suscipit vero vitae. Dignissimos, dolor.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae culpa cupiditate earum enim eos est ex id impedit laboriosam, laudantium nam odio quasi repellendus suscipit vero vitae. Dignissimos, dolor.</p>
+            <p>Plateformes technologiques de l'IUT1 de Grenoble <br>
+                151 rue de la Papeterie <br>
+                38400 Saint-Martin-D’hères <br>
+                04.76.82.53.00 <br>
+                <br>
+                <a href="#" class="footer-link">Mentions Légales</a>
+            </p>
+            <p>
+                <a href="http://formations.univ-grenoble-alpes.fr/fr/catalogue/dut-CB/sciences-technologies-sante-STS/dut-genie-electrique-et-informatique-industrielle-program-dut-genie-electrique-et-informatique-industrielle.html" class="footer-link">Formation GEII</a>
+                <a href="http://formations.univ-grenoble-alpes.fr/fr/catalogue/dut-CB/sciences-technologies-sante-STS/dut-genie-civil-construction-durable-program-dut-genie-civil-et-construction-durable.html" class="footer-link">Formation GCCD</a>
+                <a href="http://formations.univ-grenoble-alpes.fr/fr/catalogue/dut-CB/sciences-technologies-sante-STS/dut-genie-mecanique-et-productique-program-dut-genie-mecanique-et-productique.html" class="footer-link">Formation GMP</a>
+                <a href="http://formations.univ-grenoble-alpes.fr/fr/catalogue/dut-CB/sciences-technologies-sante-STS/dut-chimie-program-dut-chimie.html" class="footer-link">Formation Chimie</a>
+                <a href="http://formations.univ-grenoble-alpes.fr/fr/catalogue/dut-CB/sciences-technologies-sante-STS/dut-genie-thermique-et-energie-program-dut-genie-therminique-et-energie.html" class="footer-link">Formation GTE</a>
+            </p>
         </div>
     </footer>
 
@@ -460,16 +472,23 @@
 </svg>
 
     </div>
-
+    <div class="overlay-video" id="motion">
+        <video src="video/motion.mp4" controls></video>
+        <div class="close">&times;</div>
+    </div>
+    <div class="overlay-video" id="video">
+        <video src="video/video.mp4" controls></video>
+        <div class="close">&times;</div>
+    </div>
     <nav id="main-nav">
-        <div id="menu__logo"><img src="assets/img/logos/logo-global-light.svg" alt=""><img src="assets/img/logos/logo-global-dark.svg" alt=""></div>
+        <div id="menu__logo"><a href="index.html"><img src="assets/img/logos/logo-global-light.svg" alt=""><img src="assets/img/logos/logo-global-dark.svg" alt=""></a></div>
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="geii.html" class="geii active"><i class="icon i-geii menu-picto"></i>CEDMS</a></li>
-            <li><a href="chimie.html" class="chimie"><i class="icon i-chimie menu-picto"></i>CFMC Chimie</a></li>
-            <li><a href="gccd.html" class="gccd"><i class="icon i-gccd menu-picto"></i>Hall Structure</a></li>
+            <li><a href="geii.html" class="geii"><i class="icon i-geii menu-picto"></i>CEDMS</a></li>
+            <li><a href="gccd.html" class="gccd"><i class="icon i-gccd menu-picto"></i>Halle Structure</a></li>
             <li><a href="gmp.html" class="gmp"><i class="icon i-gmp menu-picto"></i>S.MART</a></li>
-            <li><a href="gte.html" class="gte"><i class="icon i-gte menu-picto"></i>CFMC GTE</a></li>
+            <li><a href="chimie.html" class="chimie"><i class="icon i-chimie menu-picto"></i>CFMC</a></li>
+            <li><a href="gte.html" class="gte"><i class="icon i-gte menu-picto"></i>Frigo CO <sub>2</sub>H<sub></sub>2</a></li>
             <li id="menu__cta" class="not-menuitem">
                 <a href="pro.html" class="btn btn-theme">Espace Pro</a>
             </li>

@@ -72,7 +72,7 @@ export default function setUpMap() {
         marker.setActive(true)
         hoverMarker = marker
     })
-    $('.list-plateformes').mouseout(function () {
+    $('.list-plateformes').mouseleave(function () {
         if (hoverMarker) hoverMarker.setActive(false)
     })
     myMap.center()

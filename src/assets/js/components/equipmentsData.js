@@ -11,6 +11,7 @@ Enfin, vous aurez la possibilité de créer constamment des images nettes à par
             { class: "geii", name: "GEII" },
             { class: "geii", name: "Plateforme CEDMS" },
             { class: "", name: "Électronique" },
+            { class: "", name: "Brasage" },
             { class: "", name: "Contrôle qualité" }
         ],
         platform: 'geii',
@@ -83,6 +84,40 @@ Le banc de flexion est donc un outil au centre de la “Halle Structure” qui t
         ],
         platform: 'gccd',
         urlPDF: 'documents/fiche%20technique%20-%20banc%20de%20flexion.pdf'
+    },
+    {
+        name: "Machine de brasage BGA",
+        description: `Cette machine permet de positionner un composant et de le braser.
+
+Elle assure l’alignement du composant BGA grâce au module « flip chip ». Ce module utilise une caméra qui permet de superposer les images des plages d’accueil du PCB et du BGA afin de bien aligner les billes de brasure sur le circuit imprimé.
+
+Cette machine permet aussi de braser le composant, pour cela elle chauffe les deux côtés du composant.
+
+Elle est utilisée au CEDMS pour réparer les cartes endommagées et assembler des composants neufs.`,
+        tags: [
+            { class: "geii", name: "GEII" },
+            { class: "geii", name: "CEDMS" },
+            { class: "", name: "Électronique" },
+            { class: "", name: "Brasage" }
+        ],
+        platform: 'geii',
+        urlPDF: 'documents/fiche%20technique%20-%20brasage.pdf'
+    },
+    {
+        name: "Machine de brasage à la vague",
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius, urna in tincidunt posuere, eros est ornare lorem, ac ullamcorper purus nisl id tellus. Nunc ullamcorper lorem aliquam efficitur laoreet. In hac habitasse platea dictumst. Vivamus facilisis vestibulum leo. Aenean eu mi sed eros condimentum cursus. Quisque viverra accumsan erat, at fermentum leo scelerisque a. Nullam facilisis nulla lorem, vel laoreet massa suscipit nec. Suspendisse bibendum euismod ullamcorper. Mauris velit ante, feugiat consectetur gravida non, faucibus sit amet erat. Aliquam luctus gravida dui at tristique. Pellentesque cursus, ex eget fringilla feugiat, est nulla pharetra felis, ac gravida urna ipsum gravida lectus. Ut commodo eros ante, at faucibus dolor dictum in. 
+
+Mauris et convallis felis. Ut pretium dapibus metus, sed ultricies ante posuere vel. Donec tincidunt libero eu nisl ultricies sagittis.
+
+Vestibulum lacus felis, hendrerit a porttitor vel, porttitor quis nibh. Curabitur eget massa eget ex mollis elementum ac eu felis. Nam bibendum viverra nulla, id bibendum sapien placerat quis. Sed libero nisi, imperdiet nec porttitor blandit, suscipit vitae enim. Vivamus eros nulla, dignissim non erat vitae, laoreet blandit lorem. Nulla facilisi.`,
+        tags: [
+            { class: "geii", name: "GEII" },
+            { class: "geii", name: "CEDMS" },
+            { class: "", name: "Électronique" },
+            { class: "", name: "Brasage" }
+        ],
+        platform: 'geii',
+        urlPDF: 'documents/fiche%20technique%20-%20brasage%20vague.pdf'
     }
 ]
 

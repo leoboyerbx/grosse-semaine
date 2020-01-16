@@ -83,5 +83,30 @@ $(document).ready(function() {
         setUpMap()
     }
 
+    class OverlayVideo {
+        constructor ($element) {
+            this.element = $element
+            this.video = $element.find('video').get(0)
+            this.element.find('.close').click(() => this.close())
+        }
+        close () {
+            console.log('close')
+            this.element.removeClass('visible')
+            this.video.pause()
+        }
+        open () {
+            this.element.addClass('visible')
+            this.video.play()
+        }
+    }
+
+    $('.js-show-video').each(function () {
+        const target = new OverlayVideo($($(this).data('target')))
+        $(this).click(ev => {
+            ev.preventDefault()
+            target.open()
+        })
+    })
+
 })
 //test

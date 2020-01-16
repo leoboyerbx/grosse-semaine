@@ -15,6 +15,9 @@
 @import "./modules/circuit";
 @import "./modules/machine";
 
+
+$deps: "chimie" "gccd" "geii" "gmp" "gte";
+
 * {
   box-sizing: border-box;
 }
@@ -115,10 +118,12 @@ body {
   color: #fff;
   background-color: #000;
 }
-.plateforme__header--geii {
-  background: url('~img/bg-header-geii.jpg') center center fixed;
-  background-size: cover;
 
+@each $dep in $deps {
+  .plateforme__header--#{$dep} {
+    background: url('~img/bg-header-#{$dep}.jpg') center center fixed;
+    background-size: cover;
+  }
 }
 
 .header__logo {
@@ -211,6 +216,7 @@ body {
   .col-left {grid-area: col-left}
   .col-right {
     grid-area: col-right;
+    margin-left: auto;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -218,6 +224,7 @@ body {
     justify-content: center;
     height: 100%;
     padding-top: 20px;
+    max-width: 220px;
   }
   .readmore-link {
     color: #2980b9;
@@ -288,7 +295,6 @@ body {
 }
 
 .icon {
-  $deps: "chimie" "gccd" "geii" "gmp" "gte";
   @each $dep in $deps {
     &.i-#{$dep} {
       &::before {
@@ -322,15 +328,58 @@ body {
   flex-grow: 1;
 }
 .footer__text {
-  margin: 30px -20px;
+  margin: 30px 0;
   max-width: 700px;
   flex-grow: 4;
+  flex-wrap: wrap;
   display: flex;
+  font-size: 1.05em;
+  line-height: 1.6em;
   p {
     margin: 0 20px;
+  }
+}
+.footer-link {
+  color: #82e2ff;
+  transition: all .2s;
+  display: block;
+  &:hover {
+    color: #568dab;
   }
 }
 .page--content {
   background-color: #fff;
   padding-bottom: 80px;
+}
+
+.overlay-video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 5000;
+  pointer-events: none;
+  transition: all .2s;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+  video {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .close {
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 3em;
+  }
 }

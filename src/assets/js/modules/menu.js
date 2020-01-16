@@ -48,12 +48,16 @@ async function createElements (sources) {
   // menu.elementsWidth = window.getComputedStyle(menu.itemsWrapper).getPropertyValue('padding-left')
   menu.elementsWidth += parseFloat(css(menu.itemsWrapper, 'padding-left').replace(/px/gi, ''))
 
+  let i = 0
   sources.forEach(source => {
     const item = {
       source,
       element: source
     }
     menu.items.push(item)
+    if (i == menu.currentPageIndex) {
+      item.element.querySelector('a').classList.add('active')
+    }
 
     // menu.itemsWrapper.appendChild(item.element)
     menu.elementsWidth += item.element.getBoundingClientRect().width
@@ -64,6 +68,7 @@ async function createElements (sources) {
     item.element.addEventListener('mouseout', ev => {
       underlineItem(menu.currentPageIndex)
     })
+    i++
   })
 
   menu.underline = document.createElement('div')

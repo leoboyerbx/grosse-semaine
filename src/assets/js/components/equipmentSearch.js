@@ -5,12 +5,9 @@ export default function equipmentSearch () {
     const $wrapper = $('#pro__equipments-list')
     generateList($wrapper)
 
-    $('#search-field').focus().keyup(function (ev) {
-        const $input = $(this)
-        let val = $input.val()
-
-
-        let regEx = `(.*)(${escape(val)})(.*)`
+    const runSearch = function (val) {
+        let regEx = `(.*)(${val})(.*)`
+        console.log(regEx)
 
         $('.pro__equipment-item').show()
 
@@ -52,7 +49,14 @@ export default function equipmentSearch () {
                 unHighlightNext($(this))
             })
         }
+    }
+    let $searchField = $('#search-field')
+    $searchField.focus().keyup(function () {
+        runSearch($(this).val())
     })
+    if($('#search-field').val().length) {
+        runSearch($searchField.val())
+    }
 }
 
 function openHiddenParagraphs ($item) {

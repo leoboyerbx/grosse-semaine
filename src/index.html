@@ -9,38 +9,77 @@
 <body data-page="0">
 <section id="home__header">
     <div class="home__header__content">
-        <div class="header__logo">
+        <div class="home__header__logo">
             <img src="assets/img/logos/logo-global-light.svg" alt="" class="header__logo__img">
         </div>
         <h1>Plateformes technologiques de l'IUT1</h1>
         <p>L'IUT1 met à disposition de ses étudiants et des entreprises grenobloises des plateformes technologiques de pointe.</p>
         <p>Elles permettent aux étudiants de se former sur des équipements professionnels. Les entreprises peuvent quant à elles y effectuer des tâches techniques à moindre coût, et y rencontrer des étudiants.</p>
-        <%let test = "hello"%>
-        <%=test%>
     </div>
 </section>
 <section id="home__content" class="page--content">
     <h1>Les plateformes</h1>
-    <div class="list-plateformes">
-        <div class="component-plateforme">
-            <img src="" alt="">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="list-plateformes">
+                <div class="component-plateforme">
+                    <img src="assets/img/logos/logo-geii-dark.svg" class="component-plateforme__logo" alt="">
+                    <p>Département GEII</p>
+                    <a href="geii.html" class="btn btn-geii">Voir la plateforme</a>
+                </div>
+                <div class="component-plateforme">
+                    <img src="assets/img/logos/logo-chimie-dark.svg" class="component-plateforme__logo" alt="">
+                    <p>Département Chimie</p>
+                    <a href="chimie.html" class="btn btn-chimie">Voir la plateforme</a>
+                </div>
+                <div class="component-plateforme">
+                    <img src="assets/img/logos/logo-gccd-dark.svg" class="component-plateforme__logo" alt="">
+                    <p>Département GCCD</p>
+                    <a href="gccd.html" class="btn btn-gccd">Voir la plateforme</a>
+                </div>
+                <div class="component-plateforme">
+                    <img src="assets/img/logos/logo-gmp-dark.svg" class="component-plateforme__logo" alt="">
+                    <p>Département GMP</p>
+                    <a href="gmp.html" class="btn btn-gmp">Voir la plateforme</a>
+                </div>
+                <div class="component-plateforme">
+                    <img src="assets/img/logos/logo-gte-dark.svg" class="component-plateforme__logo" alt="">
+                    <p>Département GTE</p>
+                    <a href="gte.html" class="btn btn-gte">Voir la plateforme</a>
+                </div>
+            </div>
         </div>
-        <div class="component-plateforme"></div>
-        <div class="component-plateforme"></div>
-        <div class="component-plateforme"></div>
-        <div class="component-plateforme"></div>
+        <div class="col-md-4 d-flex align-items-center">
+            <div id="popups" style="display: none">
+                <div class="popup" data-id="cedms" data-lat="45.199157" data-lng="5.775935"><p>CEDMS</p></div>
+            </div>
+            <div id="home__map">
+                <div id="leafmap"></div>
+            </div>
+        </div>
     </div>
+    <h1>Rechercher un équipement</h1>
+    <p>Pour rechercher directement un équipement, vous pouvez consulter l'<a href="pro.html">espace Professionnels</a>.</p>
 </section>
+<footer id="main-footer">
+    <div class="footer__logo">
+        <img src="assets/img/logos/logo-global-light.svg" alt="">
+    </div>
+    <div class="footer__text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae culpa cupiditate earum enim eos est ex id impedit laboriosam, laudantium nam odio quasi repellendus suscipit vero vitae. Dignissimos, dolor.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab beatae culpa cupiditate earum enim eos est ex id impedit laboriosam, laudantium nam odio quasi repellendus suscipit vero vitae. Dignissimos, dolor.</p>
+    </div>
+</footer>
 
 <nav id="main-nav">
     <div id="menu__logo"><img src="assets/img/logos/logo-global-light.svg" alt=""><img src="assets/img/logos/logo-global-dark.svg" alt=""></div>
     <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="geii.html" class="geii"><i class="icon i-geii menu-picto"></i>CEDMS</a></li>
-        <li><a href="chimie.html" class="chimie"><i class="icon i-chimie menu-picto"></i>CFMC Chimie</a></li>
-        <li><a href="gccd.html" class="gccd"><i class="icon i-gccd menu-picto"></i>Hall Structure</a></li>
+        <li><a href="chimie.html" class="chimie"><i class="icon i-chimie menu-picto"></i>CFMC</a></li>
+        <li><a href="gccd.html" class="gccd"><i class="icon i-gccd menu-picto"></i>Halle Structure</a></li>
         <li><a href="gmp.html" class="gmp"><i class="icon i-gmp menu-picto"></i>S.MART</a></li>
-        <li><a href="gte.html" class="gte"><i class="icon i-gte menu-picto"></i>CFMC GTE</a></li>
+        <li><a href="gte.html" class="gte"><i class="icon i-gte menu-picto"></i>Frigo CO <sub>2</sub>H<sub></sub>2</a></li>
         <li id="menu__cta" class="not-menuitem">
             <a href="pro.html" class="btn btn-theme">Espace Pro</a>
         </li>

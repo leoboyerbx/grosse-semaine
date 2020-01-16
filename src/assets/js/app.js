@@ -4,51 +4,7 @@ import AssignClass from "@/modules/AssignClass";
 import setUpLightBoxes from "@/modules/lightbox";
 import createMenu from "@/modules/menu";
 import equipmentSearch from "@/components/equipmentSearch";
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
-
-class LeafletMap {
-
-    constructor () {
-        this.map = null
-    }
-
-    load(element) {
-        this.map = L.map(element, {
-            closePopupOnClick: false,
-        }).setView(['45.199157', '5.775935'], 13)
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGVvYm95ZXJieCIsImEiOiJjazVnOXhmbXIwMzdkM2ZtMmQ5dHBzdXk2In0.XRQFK6KKNZQFw3hMYNPdZg', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 18,
-            id: 'mapbox/streets-v11',
-            accessToken: 'pk.eyJ1IjoibGVvYm95ZXJieCIsImEiOiJjazVnOXhmbXIwMzdkM2ZtMmQ5dHBzdXk2In0.XRQFK6KKNZQFw3hMYNPdZg'
-        }).addTo(this.map)
-    }
-
-    addMarker (lat, lng, text) {
-        let point = [lat, lng]
-        L.popup({
-            autoClose: false,
-            closeOnEscapeKey: false,
-            closeButton: false,
-            className: 'marker'
-        })
-            .setLatLng(point)
-            .setContent(text)
-            .openOn(this.map)
-    }
-}
-
-function setUpMap() {
-    let myMap = new LeafletMap()
-    myMap.load('leafmap')
-
-    $('#popups .popup').each(function () {
-        const popup = this
-        myMap.addMarker(popup.dataset.lat, popup.dataset.lng, popup.innerHTML)
-    })
-
-}
+import setUpMap from "@/modules/setUpMap";
 
 $(document).ready(function() {
     //config footer

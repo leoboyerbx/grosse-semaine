@@ -82,7 +82,8 @@ body {
 }
 
 #home__map {
-  position: relative;
+  position: sticky;
+  top: 100px;
   padding-top: 130%;
   width: 100%;
 }
@@ -92,6 +93,12 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+}
+.marker.is-active {
+  .leaflet-popup-content-wrapper {
+    background-color: #f00;
+
+  }
 }
 
 .plateforme__header {

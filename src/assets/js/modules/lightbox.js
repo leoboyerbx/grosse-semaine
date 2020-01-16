@@ -27,7 +27,7 @@ function createLightBox () {
             transition: 'all .4s',
             opacity: '0',
             'pointer-events': 'none',
-            'z-index': '50'
+            'z-index': '5000'
         })
         lightboxWrapper.onclick = hideLightBox
         document.querySelector('body').appendChild(lightboxWrapper)

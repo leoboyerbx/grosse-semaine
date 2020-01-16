@@ -32,14 +32,6 @@ let config = {
     devtool: dev ? "cheap-module-eval-source-map" : "source-map",
     module: {
         rules: [
-            // {
-            //     test: /\.ejs$/,
-            //     use: [
-            //         {
-            //             loader: "ejs-loader",
-            //         },
-            //     ]
-            // },
             {
                 test: /\.html$/,
                 use: ['html-loader']
@@ -79,7 +71,17 @@ let config = {
                     {
                         loader: 'img-loader',
                         options: {
-                            enabled: !dev
+                            enabled: !dev,
+                            plugins: [
+                                require('imagemin-mozjpeg')({
+                                    progressive: true,
+                                    arithmetic: false
+                                }),
+                                require('imagemin-pngquant')({
+                                    floyd: 0.5,
+                                    speed: 2
+                                })
+                            ]
                         }
                     }
                 ],

@@ -95,8 +95,9 @@ body {
   left: 0;
 }
 .marker.is-active {
-  .leaflet-popup-content-wrapper {
-    background-color: #f00;
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background-color: #3f41ff;
+    color: #fff;
 
   }
 }
@@ -189,8 +190,14 @@ body {
   margin: 20px 0;
 
   display: grid;
-  grid-template-areas: "col-left col-left col-left col-right"
-                        "tags tags tags tags";
+  grid-template-areas: "col-left"
+  "col-right"
+                      "tags";
+  @include md() {
+    grid-template-areas: "col-left col-left col-left col-right"
+    "tags tags tags tags";
+
+  }
 
   h1 {
     padding: 0;
@@ -232,6 +239,7 @@ body {
 }
 .pro__equipment-item__tags {
   display: flex;
+  flex-wrap: wrap;
   grid-area: tags;
 
   .tag {

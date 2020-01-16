@@ -14,8 +14,7 @@ Enfin, vous aurez la possibilité de créer constamment des images nettes à par
             { class: "", name: "Contrôle qualité" }
         ],
         platform: 'geii',
-        urlPDF: '#',
-        url: ''
+        urlPDF: 'documents/fiche%20technique%20-%20Ersascope.pdf'
     },
     {
         name: "Pile à combustible",
@@ -25,10 +24,11 @@ Tout cela est étroitement lié au département GTE (Génie Thermique et Énergi
         tags: [
             { class: "chimie", name: "CHIMIE" },
             { class: "chimie", name: "Plateforme CFMC" },
-            { class: "", name: "Lorem" }
+            { class: "", name: "Energie" },
+            { class: "", name: "Production" }
         ],
         platform: 'chimie',
-        url: '#'
+        urlPDF: 'documents/fiche technique - pile à combustible.pdf'
     },
     {
         name: "Frigo CO2",
@@ -43,7 +43,7 @@ Tout cela est étroitement lié au département GTE (Génie Thermique et Énergi
             { class: "", name: "CO2" }
         ],
         platform: 'gte',
-        url: '#'
+        urlPDF: 'documents/fiche%20technique%20-%20frigo%20CO2.pdf'
     },
     {
         name: "CLX 350",
@@ -60,8 +60,7 @@ Cette machine offre donc aux étudiants et aux professionnels une grande qualit�
             { class: "", name: "Tournage" }
         ],
         platform: 'gmp',
-        urlPDF: '#',
-        url: ''
+        urlPDF: 'documents/fiche%20technique%20-%20CLX350.pdf'
     },
     {
         name: "Banc de flexion",
@@ -83,8 +82,7 @@ Le banc de flexion est donc un outil au centre de la “Halle Structure” qui t
             { class: "", name: "Contrôle qualité" }
         ],
         platform: 'gccd',
-        urlPDF: '#',
-        url: ''
+        urlPDF: 'documents/fiche%20technique%20-%20banc%20de%20flexion.pdf'
     }
 ]
 

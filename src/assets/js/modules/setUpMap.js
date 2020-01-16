@@ -27,7 +27,7 @@ class LeafletMap {
         return marker
     }
     center () {
-        this.map.fitBounds(this.bounds)
+        this.map.fitBounds(this.bounds, {padding: [100, 50]})
     }
 }
 
@@ -71,6 +71,9 @@ export default function setUpMap() {
         let marker = markers[$(this).data('rel')]
         marker.setActive(true)
         hoverMarker = marker
+    })
+    $('.list-plateformes').mouseout(function () {
+        if (hoverMarker) hoverMarker.setActive(false)
     })
     myMap.center()
 

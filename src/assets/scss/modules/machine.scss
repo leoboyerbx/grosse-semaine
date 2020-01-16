@@ -8,6 +8,14 @@
   width: 50%;
   padding: 6%;
 }
+.machine__description__buttons {
+  width: 100%;
+  margin: 20px -5px 0;
+  padding: 16px 0;
+  .btn {
+    margin: 5px;
+  }
+}
 .machine__description__images {
   padding: 10px 0;
 }
@@ -16,6 +24,7 @@
   height: 100px;
   object-fit: cover;
   cursor: pointer;
+  border: solid white 1px;
 }
 #intro {
   background-color: #fff;

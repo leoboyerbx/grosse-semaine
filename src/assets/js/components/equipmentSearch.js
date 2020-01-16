@@ -108,7 +108,7 @@ function generateList ($wrapper) {
 
                 </div>
                 <div class="col col-right">
-                    <a href="${equipmentItem.url}" class="download-icon"></a>
+                    <a href="${equipmentItem.urlPDF}" class="download-icon"></a>
                     <p>Fiche technique</p>
                     <p><a href="${equipmentItem.platform}.html" class="btn btn-${equipmentItem.platform}">Voir la plateforme</a></p>
                 </div>

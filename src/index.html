@@ -22,27 +22,27 @@
     <div class="row">
         <div class="col-md-8">
             <div class="list-plateformes">
-                <div class="component-plateforme" data-rel="cedms">
+                <div class="component-plateforme" data-rel="campus">
                     <img src="assets/img/logos/logo-geii-dark.svg" class="component-plateforme__logo" alt="">
                     <p>Département GEII</p>
                     <a href="geii.html" class="btn btn-geii">Voir la plateforme</a>
                 </div>
-                <div class="component-plateforme">
-                    <img src="assets/img/logos/logo-chimie-dark.svg" class="component-plateforme__logo" alt="">
-                    <p>Département Chimie</p>
-                    <a href="chimie.html" class="btn btn-chimie">Voir la plateforme</a>
-                </div>
-                <div class="component-plateforme">
+                <div class="component-plateforme" data-rel="campus">
                     <img src="assets/img/logos/logo-gccd-dark.svg" class="component-plateforme__logo" alt="">
                     <p>Département GCCD</p>
                     <a href="gccd.html" class="btn btn-gccd">Voir la plateforme</a>
                 </div>
-                <div class="component-plateforme">
+                <div class="component-plateforme" data-rel="campus">
                     <img src="assets/img/logos/logo-gmp-dark.svg" class="component-plateforme__logo" alt="">
                     <p>Département GMP</p>
                     <a href="gmp.html" class="btn btn-gmp">Voir la plateforme</a>
                 </div>
-                <div class="component-plateforme">
+                <div class="component-plateforme" data-rel="gambetta">
+                    <img src="assets/img/logos/logo-chimie-dark.svg" class="component-plateforme__logo" alt="">
+                    <p>Département Chimie</p>
+                    <a href="chimie.html" class="btn btn-chimie">Voir la plateforme</a>
+                </div>
+                <div class="component-plateforme" data-rel="gambetta">
                     <img src="assets/img/logos/logo-gte-dark.svg" class="component-plateforme__logo" alt="">
                     <p>Département GTE</p>
                     <a href="gte.html" class="btn btn-gte">Voir la plateforme</a>
@@ -51,9 +51,23 @@
         </div>
         <div class="col-md-4">
             <div id="popups" style="display: none">
-                <div class="popup" data-id="cedms" data-lat="45.199157" data-lng="5.775935"><p>CEDMS</p></div>
-                <div class="popup" data-id="cfmc" data-lat="45.199157" data-lng="5.775935"><p>CFMC</p></div>
-                <div class="popup" data-id="cfmc" data-lat="45.199157" data-lng="5.775935"><p>Halle Structure</p></div>
+                <div class="popup" data-id="campus" data-lat="45.199157" data-lng="5.775935">
+                    <p><b>Site Campus:</b>
+                    <ul>
+                        <li>CEDMS</li>
+                        <li>Hall Structure</li>
+                        <li>S.MART</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="popup" data-id="gambetta" data-lat="45.185358" data-lng="5.725482">
+                    <p><b>Site Gambetta:</b>
+                    <ul>
+                        <li>CFMC Chimie</li>
+                        <li>Frigo CO2H2</li>
+                    </ul>
+                    </p>
+                </div>
             </div>
             <div id="home__map">
                 <div id="leafmap"></div>
@@ -78,9 +92,9 @@
     <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="geii.html" class="geii"><i class="icon i-geii menu-picto"></i>CEDMS</a></li>
-        <li><a href="chimie.html" class="chimie"><i class="icon i-chimie menu-picto"></i>CFMC</a></li>
         <li><a href="gccd.html" class="gccd"><i class="icon i-gccd menu-picto"></i>Halle Structure</a></li>
         <li><a href="gmp.html" class="gmp"><i class="icon i-gmp menu-picto"></i>S.MART</a></li>
+        <li><a href="chimie.html" class="chimie"><i class="icon i-chimie menu-picto"></i>CFMC</a></li>
         <li><a href="gte.html" class="gte"><i class="icon i-gte menu-picto"></i>Frigo CO <sub>2</sub>H<sub></sub>2</a></li>
         <li id="menu__cta" class="not-menuitem">
             <a href="pro.html" class="btn btn-theme">Espace Pro</a>

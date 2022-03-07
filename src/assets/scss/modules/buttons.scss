@@ -23,10 +23,10 @@
   }
 }
 
-@include btn-dep ('theme', $color-theme-first, $color-theme-second)
-@include btn-dep ('gmp', $color-gmp-first, $color-gmp-second)
-@include btn-dep ('gte', $color-gte-first, $color-gte-second)
-@include btn-dep ('gccd', $color-gccd-first, $color-gccd-second)
-@include btn-dep ('geii', $color-geii-first, $color-geii-second)
-@include btn-dep ('chimie', $color-chimie-first, $color-chimie-second)
+@include btn-dep ('theme', $color-theme-first, $color-theme-second);
+@include btn-dep ('gmp', $color-gmp-first, $color-gmp-second);
+@include btn-dep ('gte', $color-gte-first, $color-gte-second);
+@include btn-dep ('gccd', $color-gccd-first, $color-gccd-second);
+@include btn-dep ('geii', $color-geii-first, $color-geii-second);
+@include btn-dep ('chimie', $color-chimie-first, $color-chimie-second);
 
